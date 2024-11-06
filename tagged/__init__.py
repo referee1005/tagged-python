@@ -16,7 +16,7 @@ class ParseError(ValueError):
 def split(string, compile_exprs=False):
     data = string.encode("utf-8")
     bio = io.BytesIO(data)
-
+    print(bio)
     row_offsets = [0]
     for line in data.split(b"\n"):
         row_offsets.append(row_offsets[-1] + len(line) + 1)
